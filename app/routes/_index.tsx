@@ -1,4 +1,8 @@
 import type { MetaFunction } from "@remix-run/node";
+import {
+  Outlet,
+} from "@remix-run/react";
+import Landing from "./landing.tsx"
 
 export const meta: MetaFunction = () => {
   return [
@@ -9,7 +13,7 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
+    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" , background:"red"}}>
       <h1>Welcome to Remix</h1>
       <ul>
         <li>
@@ -36,6 +40,7 @@ export default function Index() {
           </a>
         </li>
       </ul>
+      <Landing />
     </div>
   );
 }
