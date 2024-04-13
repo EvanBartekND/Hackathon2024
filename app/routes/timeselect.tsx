@@ -14,12 +14,6 @@ export const links: LinksFunction = () => [
   { rel: "stylesheet", href: styles },
 ];
 
-export async function loader() {
-  const acts:Activity[] = await getActivites();
-  
-  return json(acts);
-}
-
 export const meta: MetaFunction = () => {
   return [
     { title: "SideQuestND" },
@@ -35,21 +29,18 @@ export const meta: MetaFunction = () => {
 </div> */}
 
 export default function Index() {
-  const things = useLoaderData();
+ 
   return (
-
-    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
-      <div style={{ textAlign: 'center' }}>
-
-          <img className="logo" src={logo} alt="SideQuestND" style={{ position: "relative", top: "-20px"}}/>
-
-          <Link to="/timeselect" className="wrapper">
-              <button className="timeslot"><span>⚔️Select Side Quest⚔️</span></button>
-          </Link>
-    
-      </div>
+    <div style={{ textAlign: 'center'}}>
+        <h1 style={{ color: '#15edc6', fontSize: '54px', fontFamily: 'Playfair Display, serif'}}>Select Availability:</h1>
+            <div>
+                <button className="timeslot"><span>Friday Night</span></button>
+                <button className="timeslot"><span>Saturday Morning</span></button>
+                <button className="timeslot"><span>Saturday Evening</span></button>
+                <button className="timeslot"><span>Sunday Morning</span></button>
+                <button className="timeslot"><span>Sunday Evening</span></button>
+            </div>
 
     </div>
-    
  );
 }

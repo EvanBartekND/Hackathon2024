@@ -48,3 +48,18 @@ body {
     content: "Ready?";
     width: 100%;
   }
+
+  button.timeslot
+  {
+      width: 400px;
+      height: 50px;
+
+      font-size: 24px;
+      font-family: 'Playfair Display', serif;
+      color: #0099cc;
+      border: 2px solid #333;
+      text-align: center;
+      position: relative;
+      transition: all .15s;
+  }
+  
