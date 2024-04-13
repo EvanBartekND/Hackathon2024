@@ -1,6 +1,62 @@
-div {
-    background-color: green; 
-    height: fill;
-    width: fill;
-   }
-   
+
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+body {
+    background: linear-gradient(13deg, #ff5900 0%, #2b36da 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    top: -20px;
+  }
+
+  .logo{
+    position: relative;
+    top: -20px;
+  }
+
+
+  button.landing{
+
+    width: 320px;
+    height: 40px;
+
+    font-size: 24px;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    color: #333;
+    border: 2px solid #333;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+  }
+  
+  button.landing span{
+    position: relative;
+
+  }
+
+  button.landing:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #5a25bb;
+    transition: all .35s;
+  }
+  
+  button.landing:hover{
+    color: #fff;
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  
+  button.landing:hover:after{
+    content: "Ready?";
+    width: 100%;
+  }

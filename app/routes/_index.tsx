@@ -4,7 +4,8 @@ import {
 } from "@remix-run/react";
 
 import styles from "../styles/styles.css";
-
+import logo from "../images/notre-dame.svg";
+import { Link } from "@remix-run/react";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: styles },
@@ -12,40 +13,22 @@ export const links: LinksFunction = () => [
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "SideQuestND" },
+    { name: "description", content: "Welcome to SideQuestND!" },
   ];
 };
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8"}}>
-      <h1>Welcome to Remix</h1>
-      <ul>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/blog"
-            rel="noreferrer"
-          >
-            15m Quickstart Blog Tutorial gamer
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/jokes"
-            rel="noreferrer"
-          >
-            Deep Dive Jokes App Tutorial
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
-            Remix Docs
-          </a>
-        </li>
-      </ul>
+    <div className="landing">
+        <img className="logo" src={logo} alt="SideQuestND" />
+        <br/>
+        <Link to="/login" className="wrapper">
+            <button className="landing"><span>⚔️Select Side Quest⚔️</span></button>
+        </Link>
+        <br/>     
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     </div>
-  );
+    
+ );
 }
