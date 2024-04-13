@@ -4,19 +4,7 @@
 
 body {
     background: linear-gradient(13deg, #ff5900 0%, #2b36da 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    position: relative;
-    top: -20px;
   }
-
-  .logo{
-    position: relative;
-    top: -20px;
-  }
-
 
   button.landing{
 
