@@ -27,16 +27,16 @@ export const meta: MetaFunction = () => {
   ];
 };
 
+{/* <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8"}}>
+<p> heyo </p>
+{things.map((activity) => (
+  <div key={activity.name}>{activity.name}</div>
+))} 
+</div> */}
 
 export default function Index() {
   const things = useLoaderData();
   return (
-
-<!--     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8"}}>
-      <p> heyo </p>
-      {things.map((activity) => (
-        <div key={activity.name}>{activity.name}</div>
-      ))} -->
 
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
       <div style={{ textAlign: 'center' }}>
