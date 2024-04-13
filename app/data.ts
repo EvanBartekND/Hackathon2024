@@ -69,3 +69,9 @@ export async function getActivites(): Promise<Activity[]> {
     }
     return activites3.sort();
 }
+
+export async function getActivity(name:string): Promise<Activity> {
+    await new Promise((resolve) => setTimeout(resolve, 500))
+    const activity:Activity = acts.find(element => (element.name.replace(/\s/g, '') == name ));
+    return activity;
+}

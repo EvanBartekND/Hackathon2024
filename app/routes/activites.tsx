@@ -46,7 +46,7 @@ export function ActivityCard({ activity }) {
           <Card.Text>
             Time: {activity.time}
           </Card.Text>
-            <Link to={activity.name} className="wrapper">
+            <Link to={"/Info/"+activity.name.replace(/\s/g, '')} className="wrapper">
                 <Button variant="primary">select quest</Button>
             </Link>
         </Card.Body>
