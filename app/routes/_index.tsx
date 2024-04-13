@@ -20,13 +20,16 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="landing">
-        <img className="logo" src={logo} alt="SideQuestND" />
-        <br/>
-        <Link to="/login" className="wrapper">
-            <button className="landing"><span>⚔️Select Side Quest⚔️</span></button>
-        </Link>
-        <br/>     
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
+      <div style={{ textAlign: 'center' }}>
+
+          <img className="logo" src={logo} alt="SideQuestND" style={{ position: "relative", top: "-20px"}}/>
+
+          <Link to="/login" className="wrapper">
+              <button className="landing"><span>⚔️Select Side Quest⚔️</span></button>
+          </Link>
+    
+      </div>
     </div>
     
  );
