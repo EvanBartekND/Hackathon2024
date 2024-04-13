@@ -1,8 +1,14 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction, LinksFunction } from "@remix-run/node";
 import {
   Outlet,
 } from "@remix-run/react";
-import Landing from "./landing.tsx"
+
+import styles from "../styles/styles.css";
+
+
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: styles },
+];
 
 export const meta: MetaFunction = () => {
   return [
@@ -13,7 +19,7 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" , background:"red"}}>
+    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8"}}>
       <h1>Welcome to Remix</h1>
       <ul>
         <li>
@@ -40,7 +46,6 @@ export default function Index() {
           </a>
         </li>
       </ul>
-      <Landing />
     </div>
   );
 }

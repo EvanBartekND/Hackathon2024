@@ -1,5 +1,4 @@
 
-
 export default function Landing() {
     return (
     <div >
@@ -9,6 +8,7 @@ export default function Landing() {
         <br />
         <p> Meeting New People </p>
         <p> Doing New Things </p>
+        
     </div>
  );
 }
