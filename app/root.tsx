@@ -5,6 +5,8 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (

@@ -1,7 +1,4 @@
 import type { MetaFunction, LinksFunction } from "@remix-run/node";
-import {
-} from "@remix-run/react";
-
 
 import styles from "../styles/styles.css";
 import logo from "../images/notre-dame.svg";
