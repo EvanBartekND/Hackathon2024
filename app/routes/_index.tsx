@@ -27,7 +27,6 @@ export default function Index() {
             <button className="landing"><span>⚔️Select Side Quest⚔️</span></button>
         </Link>
         <br/>     
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     </div>
     
  );
