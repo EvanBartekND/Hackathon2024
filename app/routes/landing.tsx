@@ -1,4 +1,14 @@
 
+import type { LinksFunction } from "@remix-run/node";
+
+import styles from "../styles/styles.css";
+
+
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: styles },
+];
+
+
 export default function Landing() {
     return (
     <div >
