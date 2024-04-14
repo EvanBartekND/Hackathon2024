@@ -1,6 +1,6 @@
 import type { LoaderFunctionArgs } from "@remix-run/node"; // or cloudflare/deno
 import { json } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react";
+import { useLoaderData, Link } from "@remix-run/react";
 import { getActivity } from "~/data.ts";
 import { Row, Col, Card } from "react-bootstrap";
 
@@ -46,6 +46,15 @@ export default function Info() {
           </Card>
         </Col>
       </Row>
+      <div
+        style={{
+          position: "absolute",
+          bottom: "24px",
+          right: "24px",
+        }}
+      >
+        <Link to="/" style={{color: '#F7F4EB', fontSize: '50px'}}>.</Link>
+      </div>
     </div>
   );
 }
