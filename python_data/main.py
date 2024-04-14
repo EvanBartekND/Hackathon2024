@@ -75,7 +75,7 @@ def main():
 
     json_arr = []
     for i, event in enumerate(events_list):
-        if(int(determine.determine_event(f"###{event.name}### '''{event.description}'''"))):
+        if(int(determine.determine_event(f"###{event.name}### '''{event.description}''' ***{event.time}***"))):
             #accepted += 1
             #print(f'Event {i}: {event.name}, {event.time}, {event.location}, {event.description}')
             #print()
