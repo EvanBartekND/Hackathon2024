@@ -36,7 +36,7 @@ export default function Index() {
  
   return (
     <div style={{ textAlign: 'center' }}>
-        <h1 style={{ color: '#000000'}}>Select Availability:</h1>
+        <h1 style={{ position: 'relative', top: '15px', color: '#000000', fontFamily: 'Space Grotesk, serif'}}>Select Availability:</h1>
         <Container style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
             <div class="row">
                 <Link to={"/activites/0"}>

@@ -17,6 +17,7 @@ export const meta: MetaFunction = () => {
 };
 
 import styles from "./styles/styles.css";
+
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: styles },
 ];
@@ -29,6 +30,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet"/>
         <Meta />
         <Links />
       </head>
