@@ -7,7 +7,7 @@ div{
 body {
   /* background-image: url("../images/trialgradient.jpg");
   background-position: 80%; */
-    background-color: lightblue;
+    background-color: #F7F4EB;
     /* background-size: cover; */
     /* background: linear-gradient(13deg, #ff5900 0%, #2b36da 100%); */
   }
@@ -62,7 +62,7 @@ body {
 
   button.timeslot {
     max-width: 800px; /* Use max-width instead of width for relative sizing */
-    width: 100%; /* Allow the button to take the full width of its container */
+    width: 110%; /* Allow the button to take the full width of its container */
     height: auto; /* Use auto height to maintain aspect ratio */
     font-size: 36px;
     margin: 20px auto; /* Center the button horizontally and provide vertical margin */
