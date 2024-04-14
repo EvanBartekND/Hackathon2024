@@ -1,50 +1,35 @@
+import data from "../python_data/info.json"
+
+
 type Activity = {
-    time: string;
-    timeBlock: int; //0: fri evening, 1:sat day, 2: sat eve, 3: sun day, 4: sun eve
+    time: string ;
+    timeBlock: number; //0: fri evening, 1:sat day, 2: sat eve, 3: sun day, 4: sun eve
     desc: string;
     name: string;
     location: string;
 };
 
-const acts:Activity[] = [
-    {
-        time: "03:00 pm", 
-        timeBlock:1,
-        desc:"dont be racist lmao",
-        name:"Lecture on anit-racism",
-        location:"hesburgh"
-    },
-    {
-        time: "07:00 pm", 
-        timeBlock:1,
-        desc:"we lover cultre and stuff",
-        name:"explore meuseum",
-        location:"snite meuseum"        
-    },
-    {
-        time: "09:00 am", 
-        timeBlock:1,
-        desc:"running for a cause",
-        name:"half marathon for diversity",
-        location:"south quad"        
-    },        
-    {
-        time: "05:00 pm", 
-        timeBlock:1,
-        desc:"experience yummy food",
-        name:"south African dinnner",
-        location:"duncan student center"        
-    },
-    {
-        time: "05:00 pm", 
-        timeBlock:4,
-        desc:"go for a walk with other players",
-        name:"walk and talk",
-        location:"st. Mary lake"        
-    }
-];
+
+const acts: Activity[] = []
+
 
 const emails:string[] = []
+
+export function populateActivities() {
+    // loop through data, right now it's a json obj (array)
+    
+    for (let i = 0; i < data.length; i++) {
+      let activity:Activity={}
+      activity.time = data[i].time;
+      activity.desc = data[i].description;
+      activity.name = data[i].name;
+      activity.location = data[i].location;
+      activity.timeBlock = 1;
+      acts.push(activity)
+
+    }
+
+  }
 
 
 export async function getActivities(timeBlock:int=0): Promise<Activity[]> {

@@ -17,7 +17,7 @@ def get_tags(url):
     doc = BeautifulSoup(result.text, "html.parser")
 
     tags_dict['a_tags'] = [tag for tag in doc.find_all("a") if tag.find_parents(class_="card-body")]
-    tags_dict['p-time_tags'] = [tag for tag in doc.find_all("p") if tag.find_parents(class_="card-body")]
+    tags_dict['p-time_tags'] = [tag for tag in doc.find_all("p", class_="event-time") if tag.find_parents(class_="card-body")]
     tags_dict['p-loc_tags'] = [tag for tag in doc.find_all("p", class_="event-location") if tag.find_parents(class_="card-body")]
     return tags_dict
 
