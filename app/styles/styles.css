@@ -21,7 +21,7 @@ body {
     text-decoration: none;
     font-family: 'Space Grotesk', sans-serif;
     color: #213E60;
-    border: 2px solid #213E60;
+    border: 2px solid black;
     letter-spacing: 2px;
     border-radius: 120px;
     text-align: center;
@@ -66,7 +66,7 @@ body {
     font-size: 24px; /* Adjust the font size for the buttons */
     margin: 20px auto; /* Center the buttons horizontally and provide vertical margin */
     font-family: 'Space Grotesk', sans-serif;
-    border: 3px solid #333;
+    border: 3px solid black;
     text-align: center;
     border-radius: 20px; /* Adjust the border radius for the buttons */
     transition: all 0.15s;
@@ -102,8 +102,8 @@ body {
   /* Style for button */
   button.login {
     padding: 10px 20px;
-    background-color: #8ECAE6;
-    color: black;
+    background-color: #213E60;
+    color: #F7F4EB;
     border: 2px solid #333;
     border-radius: 5px;
     cursor: pointer;
@@ -112,7 +112,7 @@ body {
   
   /* Hover effect for button */
   button.login:hover {
-    color: black;
+    color: #8ECAE6;
     cursor: pointer;
     transform: scale(1.1);
   }
