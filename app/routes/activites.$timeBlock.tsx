@@ -25,19 +25,22 @@ export default function Activites() {
     >
       <Row>
         <Col>
-          <Card style={{textAlign: "center", color: "white" }} bg="dark" border="warning">
+          <Card
+            style={{ textAlign: "center", color: "#F7F4EB", background: "#213E60",borderColor:"#F7F4EB"}}
+            // bg="dark"
+            // border="warning"
+          >
             <Card.Title>Choose Your Adventure</Card.Title>
           </Card>
         </Col>
       </Row>
-      <br/>
+      <br />
       <Row>
         {activites.map((activity) => (
           <Col key={activity.name} xs={12} sm={6} md={4} lg={4}>
             <ActivityCard activity={activity} />
-            <br/>
+            <br />
           </Col>
-          
         ))}
       </Row>
     </div>
@@ -47,21 +50,21 @@ export default function Activites() {
 export function ActivityCard({ activity }) {
   return (
     <Card
-      style={{textAlign: "center", color: "white" }}
-      bg="dark"
-      border="warning"
+      style={{ textAlign: "center", color: "#213E60", background: "#F7F4EF",borderColor:"#213E60"}}
+      // bg="dark"
+      // border="warning"
     >
       <Card.Header>
         <Card.Title>{activity.name}</Card.Title>
       </Card.Header>
-      <Card.Body>    
-      <Card.Text>{activity.time}</Card.Text>    
+      <Card.Body>
+        <Card.Text>{activity.time}</Card.Text>
         <Card.Text>{activity.location}</Card.Text>
         <Link
           to={"/Info/" + activity.name.replace(/\s/g, "")}
           className="wrapper"
         >
-          <Button variant="warning">select quest</Button>
+          <Button style={{color: "#F7F4EB", background: "#213E60",borderColor:"#F7F4EB"}}>select quest</Button>
         </Link>
       </Card.Body>
     </Card>
