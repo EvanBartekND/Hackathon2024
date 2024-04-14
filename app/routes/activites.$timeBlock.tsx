@@ -18,23 +18,28 @@ export default function Activites() {
     <div
       style={{
         fontFamily: "system-ui, sans-serif",
-        margin: "auto",
+        margin: "24px",
         textAlign: "center",
         justifyContent: "center",
       }}
     >
-
-      <h1  style={{ textAlign: "left" ,marginLeft:"16px"}}>Choose Your Adventure</h1>
-
-      <Container fluid>
-        <Row>
-          {activites.map((activity) => (
-            <Col key={activity.name} xs={12} sm={6} md={4} lg={4}>
-              <ActivityCard activity={activity} />
-            </Col>
-          ))}
-        </Row>
-      </Container>
+      <Row>
+        <Col>
+          <Card style={{textAlign: "center", color: "white" }} bg="dark" border="warning">
+            <Card.Title>Choose Your Adventure</Card.Title>
+          </Card>
+        </Col>
+      </Row>
+      <br/>
+      <Row>
+        {activites.map((activity) => (
+          <Col key={activity.name} xs={12} sm={6} md={4} lg={4}>
+            <ActivityCard activity={activity} />
+            <br/>
+          </Col>
+          
+        ))}
+      </Row>
     </div>
   );
 }
@@ -42,7 +47,7 @@ export default function Activites() {
 export function ActivityCard({ activity }) {
   return (
     <Card
-      style={{ width: "18rem", textAlign: "center" , color:"white"}}
+      style={{textAlign: "center", color: "white" }}
       bg="dark"
       border="warning"
     >
