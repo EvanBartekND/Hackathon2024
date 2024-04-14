@@ -1,51 +1,50 @@
 import type { LoaderFunctionArgs } from "@remix-run/node"; // or cloudflare/deno
 import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
-import {getActivity} from "~/data.ts"
-import { Row, Col, Card } from 'react-bootstrap';
-
-
-
+import { getActivity } from "~/data.ts";
+import { Row, Col, Card } from "react-bootstrap";
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {
   const act: Activity[] = await getActivity(params.name);
-  if(act){
+  if (act) {
     return json(act);
   }
-  return null 
+  return null;
 };
 
 export default function Info() {
   const info = useLoaderData();
   return (
-    <div style={{
-      //margin: "10% 20% 10% 20%", 
-      margin: "24px",
-      textAlign: "center",
-      
-    }}
+    <div
+      style={{
+        //margin: "10% 20% 10% 20%",
+        margin: "24px",
+        textAlign: "center",
+      }}
     >
       <Row>
         <Col>
-          <Card style={{textAlign: "center", color: "white" }} bg="dark" border="warning">
+          <Card
+            style={{
+              textAlign: "center",
+              color: "#F7F4EF",
+              background: "#213E60",
+              borderColor: "#F7F4EF",
+              borderRadius: "60px",
+            }}
+          >
             <Card.Header>
-            <Card.Title style={{fontSize: "72px", margin: "50px"}}>{info.name}</Card.Title>
-              </Card.Header>
-              <Card.Body>
-                  <div style={{fontSize: "36px", margin: "25px"}}>
-                  <Card.Text>
-                    {info.desc}
-                  </Card.Text >
-                  <Card.Text >
-                    Location: {info.location}
-                  </Card.Text>
-                  <Card.Text style={{fontSize: "36px", margin: "25px"}}>
-                    Time: {info.time}
-                  </Card.Text>
-                  </div>
-              </Card.Body>
-            </Card>
-          </Col>
+              <Card.Title>
+                <h1 style={{marginTop:"12px"}}>{info.name}</h1>
+              </Card.Title>
+            </Card.Header>
+            <Card.Body>
+              <Card.Text>{info.desc}</Card.Text>
+              <Card.Text>Location: {info.location}</Card.Text>
+              <Card.Text>Time: {info.time}</Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
       </Row>
     </div>
   );

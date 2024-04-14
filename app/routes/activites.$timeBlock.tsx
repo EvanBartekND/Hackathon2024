@@ -26,11 +26,11 @@ export default function Activites() {
       <Row>
         <Col>
           <Card
-            style={{ textAlign: "center", color: "#F7F4EB", background: "#213E60",borderColor:"#F7F4EB"}}
+            style={{ textAlign: "center", color: "#F7F4EB", background: "#213E60",borderColor:"#F7F4EB", borderRadius: "60px"}}
             // bg="dark"
             // border="warning"
           >
-            <Card.Title>Choose Your Adventure</Card.Title>
+            <Card.Title style={{marginTop:"10px"}}>Choose Your Adventure</Card.Title>
           </Card>
         </Col>
       </Row>
