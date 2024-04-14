@@ -25,9 +25,9 @@ export default function Login(){
                     <img src={logo} alt="SideQuestND" style={{ width: '75px', position: 'absolute', top: '15px', left: '15px' }} />
                 </Link>   
                 <Form className="login" method="post">
-                    <label htmlFor="email" style={{ fontWeight: 'bold', fontSize: '18px', marginBottom: '10px'}}>ND email address:</label>
+                    <label htmlFor="email" style={{ fontWeight: 'bold', fontSize: '18px', marginBottom: '10px', fontFamily: 'Space Grotesk, sans-serif'}}>ND email address:</label>
                     <input className="login" name="email" type="email" placeholder="netID@nd.edu"/>
-                    <button className="login" type="submit">Login</button>
+                    <button className="login" type="submit" style={{fontFamily: 'Space Grotesk, sans-serif'}}>Login</button>
                 </Form>
                 <br/>
             </div>

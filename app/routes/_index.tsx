@@ -26,7 +26,7 @@ export default function Index() {
               <button className="landing"><span>⚔️Select Side Quest⚔️</span></button>
           </Link>
           <br/>
-          <p>{things}</p>
+          <p style={{fontFamily: 'Space Grotesk, serif'}}>{things}</p>
       </div>
     </div>
     
