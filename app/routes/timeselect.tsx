@@ -80,6 +80,12 @@ export default function Index() {
                         <span>Saturday</span></button>
                 </Link>
             </div>
+            <div>
+                <Link to={"/newform"}>
+                    <button className="timeslot" style={{ color: "#000000", backgroundColor: "#FFA859", width: "100%", height: '100%', fontSize: '100%'}}>
+                        <span>Suggest a Quest</span></button>
+                </Link>
+            </div>
 
         </Container>
     </div>
