@@ -57,3 +57,34 @@ body {
     border-radius: 120px;
     width: 100%;
   }
+
+
+  form.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Style for input field */
+  input[type="email"].login {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Style for button */
+  button.login {
+    padding: 10px 20px;
+    background-color: #2b36da;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Hover effect for button */
+  button.login:hover {
+    background-color: #1d2479;
+  }

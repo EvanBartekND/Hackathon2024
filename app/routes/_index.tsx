@@ -4,25 +4,17 @@ import {
   useLoaderData,
 } from "@remix-run/react";
 
-import {getActivites} from "~/data.ts"
+import { getActivites, getEmail } from "~/data.ts"
 
 import logo from "../images/notre-dame.svg";
 import { Link } from "@remix-run/react";
 
 
 export async function loader() {
-  const acts:Activity[] = await getActivites();
-  
-  return json(acts);
+  const email:string = await getEmail();
+  return json(email);
 }
 
-
-{/* <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8"}}>
-<p> heyo </p>
-{things.map((activity) => (
-  <div key={activity.name}>{activity.name}</div>
-))} 
-</div> */}
 
 export default function Index() {
   const things = useLoaderData();
@@ -36,7 +28,8 @@ export default function Index() {
           <Link to="/login" className="wrapper">
               <button className="landing"><span>⚔️Select Side Quest⚔️</span></button>
           </Link>
-    
+          <br/>
+          <p>{things}</p>
       </div>
 
     </div>

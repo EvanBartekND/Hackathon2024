@@ -67,7 +67,7 @@ export async function getActivity(name:string): Promise<Activity> {
     return activity;
 }
 
-export function postEmail(email:string): Promise<boolean> {
+export async function postEmail(email:string): Promise<boolean> {
     await new Promise((resolve) => setTimeout(resolve, 500))
     try {emails.push(email);}
     catch (err){
