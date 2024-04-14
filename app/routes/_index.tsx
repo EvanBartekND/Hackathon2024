@@ -18,13 +18,24 @@ export async function loader() {
 
 export default function Index() {
   const things = useLoaderData();
+
+  const emailExists = things && things !== '';
+
+
   return (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
       <div style={{ textAlign: 'center' }}>
           <img className="logo" src={logo} alt="SideQuestND" style={{ position: "relative", top: "-20px"}}/>
-          <Link to="/login" className="wrapper">
+          {emailExists ? (
+            <Link to="/timeselect" className="wrapper">
+            <button className="landing"><span>⚔️Select Side Quest⚔️</span></button>
+            </Link>
+          ) : (
+            <Link to="/login" className="wrapper">
               <button className="landing"><span>⚔️Select Side Quest⚔️</span></button>
           </Link>
+          )}
+          
           <br/>
           <p style={{fontFamily: 'Space Grotesk, serif'}}>{things}</p>
       </div>
