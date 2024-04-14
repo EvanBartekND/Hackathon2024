@@ -17,21 +17,16 @@ export async function loader() {
 
 
 export default function Index() {
-  const things = useLoaderData();
   return (
-
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
       <div style={{ textAlign: 'center' }}>
-
           <img className="logo" src={logo} alt="SideQuestND" style={{ position: "relative", top: "-20px"}}/>
-
           <Link to="/login" className="wrapper">
               <button className="landing"><span>⚔️Select Side Quest⚔️</span></button>
           </Link>
           <br/>
           <p>{things}</p>
       </div>
-
     </div>
     
  );
