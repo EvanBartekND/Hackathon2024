@@ -21,9 +21,9 @@ def summarize_event(event):
   completion = client.chat.completions.create(
     model="gpt-3.5-turbo",
     messages = [
-      {"role": "system", "content": "Summarize the given event description into bullet points, with the most with the points that could lead to personal growth or broadening of perspectives for an attendee."},
+      {"role": "system", "content": "Summarize the given event description into one paragraph, with the most with the points that could lead to personal growth or broadening of perspectives for an attendee."},
       {"role": "user", "content": event}
     ]
   )
-  
+
   return completion.choices[0].message.content
