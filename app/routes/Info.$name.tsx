@@ -3,6 +3,7 @@ import { json } from "@remix-run/node";
 import { useLoaderData, Link } from "@remix-run/react";
 import { getActivity } from "~/data.ts";
 import { Row, Col, Card } from "react-bootstrap";
+import logo from "../images/toplogo.png";
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {
   const act: Activity[] = await getActivity(params.name);
@@ -42,20 +43,14 @@ export default function Info() {
               <Card.Text>{info.desc}</Card.Text>
               <Card.Text>Location: {info.location}</Card.Text>
               <Card.Text>Time: {info.time}</Card.Text>
-              <Card.Text>Remember to arrive early to connect with fellow players!</Card.Text>
+              <Card.Text style={{color: '#FFA859', fontSize: '1.2em'}}>Remember to arrive early to connect with fellow players!</Card.Text>
             </Card.Body>
           </Card>
         </Col>
       </Row>
-      <div
-        style={{
-          position: "absolute",
-          bottom: "24px",
-          right: "24px",
-        }}
-      >
-        <Link to="/" style={{color: '#F7F4EB', fontSize: '50px'}}>.</Link>
-      </div>
+      <Link to='/'>
+        <img src={logo} alt="SideQuestND" style={{position: 'relative', width: '200px', top: '20px'}} />
+      </Link>  
     </div>
   );
 }
