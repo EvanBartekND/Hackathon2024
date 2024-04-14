@@ -35,9 +35,9 @@ export const meta: MetaFunction = () => {
 export default function Index() {
  
   return (
-    <div>
-        <h1 style={{ textAlign: 'center', padding: '20px', color: '#15edc6', fontSize: '54px'}}>Select Availability:</h1>
-        <Container fluid>
+    <div style={{ textAlign: 'center' }}>
+        <h1 style={{ color: '#000000'}}>Select Availability:</h1>
+        <Container style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
             <div class="row">
                 <Link to={"/activites/0"}>
                     <button className="timeslot" style={{color: "aquamarine", backgroundColor: "#fcad03"}}>
@@ -57,13 +57,13 @@ export default function Index() {
                 </Link>
             </div>
             <div class="row">
-                <Link to={"/activites/3"} className="wrapper">
+                <Link to={"/activites/3"}>
                     <button className="timeslot" style={{color: "#0099cc", backgroundColor: "#7bff00"}}>
                         <span>☀️   Sunday Morning (8:00am - 4:00pm)</span></button>
                 </Link>
             </div>
             <div class="row">
-                <Link to={"/activites/4"} className="wrapper">
+                <Link to={"/activites/4"}>
                     <button className="timeslot" style={{color: "aquamarine", backgroundColor: "#fcad03"}}>
                         <span>🌙   Sunday Evening (4:00pm - 1:00am)</span></button>
                 </Link>
