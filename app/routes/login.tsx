@@ -6,7 +6,7 @@ import {
 
 import { postEmail } from "~/data.ts"
 
-import logo from "../images/notre-dame.svg";
+import logo from "../images/toplogo.png";
 import { Link } from "@remix-run/react";
 
 // import Form from 'react-bootstrap/Form';
@@ -22,7 +22,7 @@ export default function Login(){
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
             <div>
                 <Link to='/'>
-                    <img src={logo} alt="SideQuestND" style={{ width: '75px', position: 'absolute', top: '15px', left: '15px' }} />
+                    <img src={logo} alt="SideQuestND" style={{ width: '200px', position: 'absolute', top: '15px', left: '15px' }} />
                 </Link>   
                 <Form className="login" method="post">
                     <label htmlFor="email" style={{ fontWeight: 'bold', fontSize: '18px', marginBottom: '10px', fontFamily: 'Space Grotesk, sans-serif'}}>ND email address:</label>
