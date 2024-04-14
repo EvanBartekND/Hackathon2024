@@ -20,14 +20,14 @@ type Activity = {
 const acts:Activity[] = [
     {
         time: "03:00 pm", 
-        timeBlock:3,
+        timeBlock:1,
         desc:"dont be racist lmao",
         name:"Lecture on anit-racism",
         location:"hesburgh"
     },
     {
         time: "07:00 pm", 
-        timeBlock:2,
+        timeBlock:1,
         desc:"we lover cultre and stuff",
         name:"explore meuseum",
         location:"snite meuseum"        
@@ -41,7 +41,7 @@ const acts:Activity[] = [
     },        
     {
         time: "05:00 pm", 
-        timeBlock:4,
+        timeBlock:1,
         desc:"experience yummy food",
         name:"south African dinnner",
         location:"duncan student center"        
@@ -56,10 +56,10 @@ const acts:Activity[] = [
 ];
 
 
-export async function getActivites(): Promise<Activity[]> {
+export async function getActivities(timeBlock:int=0): Promise<Activity[]> {
     await new Promise((resolve) => setTimeout(resolve, 500))
     const activites3:Activity[] = [];
-    const activites = acts.slice();
+    const activites = acts.filter((activity) => activity.timeBlock == timeBlock);
     for (let i=0;i<3;i++){
         if(activites.length<1) break;
         const num = Math.floor(Math.random() * activites.length);

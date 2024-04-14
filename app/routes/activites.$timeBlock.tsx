@@ -1,6 +1,6 @@
 import { useLoaderData, Link } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
-import { getActivites } from "~/data.ts";
+import { getActivities } from "~/data.ts";
 import { json } from "@remix-run/node";
 import styles from "../styles/styles.css";
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
@@ -9,8 +9,8 @@ import PropTypes from 'prop-types';
 
 
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
-export async function loader() {
-  const acts: Activity[] = await getActivites();
+export const loader = async ({ params }: LoaderFunctionArgs) => {
+  const acts: Activity[] = await getActivities((params.timeBlock as int));
   return json(acts);
 }
 
