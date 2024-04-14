@@ -42,6 +42,7 @@ export default function Info() {
               <Card.Text>{info.desc}</Card.Text>
               <Card.Text>Location: {info.location}</Card.Text>
               <Card.Text>Time: {info.time}</Card.Text>
+              <Card.Text>Remember to arrive early to connect with fellow players!</Card.Text>
             </Card.Body>
           </Card>
         </Col>
