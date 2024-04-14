@@ -64,7 +64,7 @@ export function ActivityCard({ activity }) {
           to={"/Info/" + activity.name.replace(/\s/g, "")}
           className="wrapper"
         >
-          <Button style={{color: "#F7F4EB", background: "#213E60",borderColor:"#F0EDE9"}}>select quest</Button>
+          <Button className="activity" style={{color: "#F7F4EB", background: "#213E60", border: '2px solid black'}}>Select Quest</Button>
         </Link>
       </Card.Body>
     </Card>

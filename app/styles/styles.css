@@ -117,3 +117,14 @@ body {
     transform: scale(1.1);
   }
 
+
+Button.activity{
+  transition: all 0.15s;
+}
+
+Button.activity:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+
