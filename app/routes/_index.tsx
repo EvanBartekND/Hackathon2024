@@ -5,7 +5,7 @@ import { getActivites, getEmail, populateActivities } from "~/data.ts"
 
 import logo from "../images/mainLogo.png";
 import { Link,useLoaderData} from "@remix-run/react";
-
+import { Card } from "react-bootstrap";
 
 export async function loader() {
   const email:string = await getEmail();
@@ -37,6 +37,24 @@ export default function Index() {
           
           <br/>
           <p style={{fontFamily: 'Space Grotesk, serif'}}>{things}</p>
+          
+          <Card
+            style={{
+              margin: "0 20px",
+              textAlign: "center",
+              color: "#F7F4EF",
+              background: "#213E60",
+              borderColor: "#F7F4EF",
+              borderRadius: "10px", 
+              top: '20px',
+            }}
+          >
+            <Card.Body>
+              <Card.Text>Meet New People</Card.Text>
+              <Card.Text>Try New Activities</Card.Text>
+              <Card.Text>Level-Up your College Experience</Card.Text>
+            </Card.Body>
+          </Card>
       </div>
     </div>
     
