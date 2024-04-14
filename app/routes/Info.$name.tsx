@@ -2,8 +2,7 @@ import type { LoaderFunctionArgs } from "@remix-run/node"; // or cloudflare/deno
 import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import {getActivity} from "~/data.ts"
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import PropTypes from 'prop-types'; 
+import { Row, Col, Card } from 'react-bootstrap';
 
 
 
