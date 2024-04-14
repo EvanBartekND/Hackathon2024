@@ -19,12 +19,13 @@ export function populateActivities() {
     // loop through data, right now it's a json obj (array)
     
     for (let i = 0; i < data.length; i++) {
-      let activity:Activity={}
+      const activity:Activity={}
       activity.time = data[i].time;
       activity.desc = data[i].description;
       activity.name = data[i].name;
       activity.location = data[i].location;
-      activity.timeBlock = 1;
+
+      activity.timeBlock = 0;
       acts.push(activity)
 
     }
