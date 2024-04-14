@@ -51,7 +51,7 @@ export default function Index() {
                 </Link>
             </div>    
             <div class="row">
-                <Link to={"/activites/2"}>
+                <Link to={"/activites/2"} className="wrapper">
                     <button className="timeslot" style={{color: "aquamarine", backgroundColor: "#fcad03"}}>
                         <span>🌙   Saturday Evening (4:00pm - 1:00am)</span></button>
                 </Link>
