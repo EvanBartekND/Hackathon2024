@@ -10,7 +10,32 @@ type Activity = {
 };
 
 
-const acts: Activity[] = []
+const acts: Activity[] = [
+    {
+        time: "Time: Wed, April 17 at 10:00 am - 4:00 pm",
+        timeBlock: 3,
+        desc: "Find the 'Last Supper' adaptation made from ashes and read about its background.",
+        name: "Ashen Last Supper",
+        location: "Location: Raclin Murphy Museum of Art",
+},
+    {
+        time: "Time: Wed, April 17 at 11:00 pm", 
+        timeBlock: 3,
+        desc: "Join us for a special communal prayer as we gather to recite the Rosary together. " + 
+        "This cherished Catholic devotion offers a profound opportunity for reflection, meditation, and unity in faith." +
+        "All are welcome to participate and deepen their spiritual journey with us.",
+        name: "Pray the Rosary",
+        location: "Location: The Grotto of the Lady of Lourdes",
+    },
+
+    {
+        time: "Time: Wed, April 17 at 8:00 am - 8:30 pm" ,
+        timeBlock: 3,
+        desc: "Take a selfie with the Teepee (Hint: explore the trails)",
+        name: "Find a Teepee",
+        location: "Location: Saint Joseph's Park",
+    }
+]
 
 
 const emails:string[] = []
