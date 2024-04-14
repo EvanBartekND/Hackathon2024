@@ -1,5 +1,9 @@
 import type { MetaFunction, LinksFunction, LoaderFunction } from "@remix-run/node";
+import { Link } from "@remix-run/react";
+
 import { json } from "@remix-run/node";
+import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import PropTypes from 'prop-types'; 
 import {
   useLoaderData,
 } from "@remix-run/react";
@@ -31,16 +35,41 @@ export const meta: MetaFunction = () => {
 export default function Index() {
  
   return (
-    <div style={{ textAlign: 'center'}}>
-        <h1 style={{ color: '#15edc6', fontSize: '54px', fontFamily: 'Playfair Display, serif'}}>Select Availability:</h1>
-            <div>
-                <button className="timeslot"><span>Friday Night</span></button>
-                <button className="timeslot"><span>Saturday Morning</span></button>
-                <button className="timeslot"><span>Saturday Evening</span></button>
-                <button className="timeslot"><span>Sunday Morning</span></button>
-                <button className="timeslot"><span>Sunday Evening</span></button>
+    <div>
+        <h1 style={{ textAlign: 'center', padding: '20px', color: '#15edc6', fontSize: '54px'}}>Select Availability:</h1>
+        <Container fluid>
+            <div class="row">
+                <Link to={"/activites/0"}>
+                    <button className="timeslot" style={{color: "aquamarine", backgroundColor: "#fcad03"}}>
+                        <span>🌙   Friday Evening (4:00pm - 1:00am)</span></button>
+                </Link>
+            </div>
+            <div class="row">
+                <Link to={"/activites/1"}>
+                    <button className="timeslot" style={{color: "#0099cc", backgroundColor: "#7bff00"}}>
+                        <span>☀️   Saturday Morning (8:00am - 4:00pm)</span></button>
+                </Link>
+            </div>    
+            <div class="row">
+                <Link to={"/activites/2"}>
+                    <button className="timeslot" style={{color: "aquamarine", backgroundColor: "#fcad03"}}>
+                        <span>🌙   Saturday Evening (4:00pm - 1:00am)</span></button>
+                </Link>
+            </div>
+            <div class="row">
+                <Link to={"/activites/3"} className="wrapper">
+                    <button className="timeslot" style={{color: "#0099cc", backgroundColor: "#7bff00"}}>
+                        <span>☀️   Sunday Morning (8:00am - 4:00pm)</span></button>
+                </Link>
+            </div>
+            <div class="row">
+                <Link to={"/activites/4"} className="wrapper">
+                    <button className="timeslot" style={{color: "aquamarine", backgroundColor: "#fcad03"}}>
+                        <span>🌙   Sunday Evening (4:00pm - 1:00am)</span></button>
+                </Link>
             </div>
 
+        </Container>
     </div>
  );
 }
