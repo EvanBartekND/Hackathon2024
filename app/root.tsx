@@ -8,6 +8,21 @@ import {
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "SideQuestND" },
+    { name: "description", content: "Welcome to SideQuestND!" },
+  ];
+};
+
+import styles from "./styles/styles.css";
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: styles },
+];
+
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">

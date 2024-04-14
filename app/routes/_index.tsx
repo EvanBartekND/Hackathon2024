@@ -1,20 +1,19 @@
-import type { MetaFunction, LinksFunction } from "@remix-run/node";
+import type { MetaFunction, LinksFunction, LoaderFunction } from "@remix-run/node";
+import { json } from "@remix-run/node";
+import {
+  useLoaderData,
+} from "@remix-run/react";
 
-import styles from "../styles/styles.css";
+import { getActivites, getEmail } from "~/data.ts"
+
 import logo from "../images/notre-dame.svg";
 import { Link } from "@remix-run/react";
 
-export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: styles },
-];
 
-export const meta: MetaFunction = () => {
-  return [
-    { title: "SideQuestND" },
-    { name: "description", content: "Welcome to SideQuestND!" },
-  ];
-};
-
+export async function loader() {
+  const email:string = await getEmail();
+  return json(email);
+}
 
 
 export default function Index() {
@@ -25,6 +24,8 @@ export default function Index() {
           <Link to="/login" className="wrapper">
               <button className="landing"><span>⚔️Select Side Quest⚔️</span></button>
           </Link>
+          <br/>
+          <p>{things}</p>
       </div>
     </div>
     
