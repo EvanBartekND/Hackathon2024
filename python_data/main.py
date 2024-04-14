@@ -79,6 +79,7 @@ def main():
             #accepted += 1
             #print(f'Event {i}: {event.name}, {event.time}, {event.location}, {event.description}')
             #print()
+            event.description = determine.summarize_event(event.description)
             json_arr.append(event.__dict__)
 
     with open('info.json', 'w') as file:
