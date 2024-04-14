@@ -28,9 +28,11 @@ export default function Info() {
     >
       <Row>
         <Col>
-          <Card>
+          <Card style={{textAlign: "center", color: "white" }} bg="dark" border="warning">
+            <Card.Header>
+            <Card.Title style={{fontSize: "72px", margin: "50px"}}>{info.name}</Card.Title>
+              </Card.Header>
               <Card.Body>
-                <Card.Title style={{fontSize: "72px", margin: "50px"}}>{info.name}</Card.Title>
                   <div style={{fontSize: "36px", margin: "25px"}}>
                   <Card.Text>
                     {info.desc}
