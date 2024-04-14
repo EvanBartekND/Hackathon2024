@@ -3,7 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 body {
-    background: linear-gradient(13deg, #ff5900 0%, #2b36da 100%);
+  background-image: url("../images/trialgradient.jpg");
+  background-position: 80%;
+    /* background-color: lightblue;
+    background-size: cover; */
+    /* background: linear-gradient(13deg, #ff5900 0%, #2b36da 100%); */
   }
 
   button.landing{
@@ -17,13 +21,15 @@ body {
     color: #333;
     border: 2px solid #333;
     letter-spacing: 2px;
+    border-radius: 120px;
     text-align: center;
     position: relative;
-    transition: all .35s;
+    transition: all .25s;
   }
   
   button.landing span{
     position: relative;
+    border-radius: 120px;
 
   }
 
@@ -32,19 +38,53 @@ body {
     content: "";
     top: 0;
     left: 0;
+    border-radius: 120px;
     width: 0;
     height: 100%;
     background: #5a25bb;
-    transition: all .35s;
+    transition: all .25s;
   }
   
   button.landing:hover{
     color: #fff;
     cursor: pointer;
+    border-radius: 120px;
     transform: scale(1.1);
   }
   
   button.landing:hover:after{
     content: "Ready?";
+    border-radius: 120px;
     width: 100%;
+  }
+
+
+  form.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Style for input field */
+  input[type="email"].login {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Style for button */
+  button.login {
+    padding: 10px 20px;
+    background-color: #2b36da;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Hover effect for button */
+  button.login:hover {
+    background-color: #1d2479;
   }
