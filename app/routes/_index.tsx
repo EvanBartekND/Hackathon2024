@@ -17,6 +17,7 @@ export async function loader() {
 
 
 export default function Index() {
+  const things = useLoaderData();
   return (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
       <div style={{ textAlign: 'center' }}>

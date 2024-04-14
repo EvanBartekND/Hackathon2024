@@ -46,5 +46,5 @@ export async function action({ request }: ActionFunctionArgs) {
 
     postEmail(email);
 
-    return redirect("/timingselect");
+    return redirect("/timeselect");
 }
