@@ -36,39 +36,48 @@ export default function Index() {
  
   return (
     <div style={{ textAlign: 'center' }}>
-        <Link to='/'>
-          <img src={logo} alt="SideQuestND" style={{ width: '75px', position: 'absolute', top: '15px', left: '15px', zIndex: '2' }} />
-        </Link>
-        <h1 style={{ position: 'relative', top: '25px', left: '5px', color: '#213E60', fontFamily: 'Space Grotesk, serif'}}>Select Availability</h1>
+        <h1 className="timing" style={{ position: 'relative', top: '5px', left: '5px', color: '#213E60', fontFamily: 'Space Grotesk, serif'}}>Select Availability</h1>
         <Container style={{ position: 'relative', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', top: '30px' }}>
             <div class="row">
                 <Link to={"/activites/0"}>
                     <button className="timeslot" style={{color: "#000000", backgroundColor: "#8ECAE6"}}>
-                        <span>🌙   Friday Evening (4:00pm - 1:00am)</span></button>
+                        <span>Sunday</span></button>
                 </Link>
             </div>
             <div class="row">
                 <Link to={"/activites/1"}>
                     <button className="timeslot" style={{color: "#000000", backgroundColor: "#FFA859"}}>
-                        <span>☀️   Saturday Morning (8:00am - 4:00pm)</span></button>
+                        <span>Monday</span></button>
                 </Link>
             </div>    
             <div class="row">
                 <Link to={"/activites/2"} className="wrapper">
                     <button className="timeslot" style={{color: "#000000", backgroundColor: "#8ECAE6"}}>
-                        <span>🌙   Saturday Evening (4:00pm - 1:00am)</span></button>
+                        <span>Tuesday</span></button>
                 </Link>
             </div>
             <div class="row">
                 <Link to={"/activites/3"}>
                     <button className="timeslot" style={{color: "#000000", backgroundColor: "#FFA859"}}>
-                        <span>☀️   Sunday Morning (8:00am - 4:00pm)</span></button>
+                        <span>Wednesday</span></button>
                 </Link>
             </div>
             <div class="row">
                 <Link to={"/activites/4"}>
                     <button className="timeslot" style={{color: "#000000", backgroundColor: "#8ECAE6"}}>
-                        <span>🌙   Sunday Evening (4:00pm - 1:00am)</span></button>
+                        <span>Thursday</span></button>
+                </Link>
+            </div>
+            <div class="row">
+                <Link to={"/activites/5"}>
+                    <button className="timeslot" style={{color: "#000000", backgroundColor: "#FFA859"}}>
+                        <span>Friday</span></button>
+                </Link>
+            </div>
+            <div class="row">
+                <Link to={"/activites/6"}>
+                    <button className="timeslot" style={{color: "#000000", backgroundColor: "#8ECAE6"}}>
+                        <span>Saturday</span></button>
                 </Link>
             </div>
 

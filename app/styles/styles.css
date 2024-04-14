@@ -20,8 +20,8 @@ body {
     font-size: 24px;
     text-decoration: none;
     font-family: 'Space Grotesk', sans-serif;
-    color: #333;
-    border: 2px solid #333;
+    color: #213E60;
+    border: 2px solid #213E60;
     letter-spacing: 2px;
     border-radius: 120px;
     text-align: center;
@@ -43,12 +43,12 @@ body {
     border-radius: 120px;
     width: 0;
     height: 100%;
-    background: #5a25bb;
+    background: #213E60;
     transition: all .25s;
   }
   
   button.landing:hover{
-    color: #fff;
+    color: #F7F4EB;
     cursor: pointer;
     border-radius: 120px;
     transform: scale(1.1);
@@ -61,23 +61,27 @@ body {
   }
 
   button.timeslot {
-    max-width: 800px; /* Use max-width instead of width for relative sizing */
-    width: 110%; /* Allow the button to take the full width of its container */
-    height: auto; /* Use auto height to maintain aspect ratio */
-    font-size: 36px;
-    margin: 20px auto; /* Center the button horizontally and provide vertical margin */
+    width: 300px; /* Set a fixed width for all buttons */
+    height: 100px; /* Set a fixed height for all buttons */
+    font-size: 24px; /* Adjust the font size for the buttons */
+    margin: 20px auto; /* Center the buttons horizontally and provide vertical margin */
     font-family: 'Space Grotesk', sans-serif;
     border: 3px solid #333;
     text-align: center;
-    position: relative;
-    border-radius: 120px;
-    transition: all .15s;
+    border-radius: 20px; /* Adjust the border radius for the buttons */
+    transition: all 0.15s;
   }
-
-  button.timeslot:hover{
+  
+  button.timeslot:hover {
     color: #fff;
     cursor: pointer;
     transform: scale(1.1);
+  }
+  
+  h1.timing {
+    color: #213E60; /* Set the color for the h1 element */
+    font-size: 36px; /* Adjust the font size for the h1 element */
+    margin-top: 50px; /* Set top margin for the h1 element */
   }
 
   form.login {
@@ -98,15 +102,18 @@ body {
   /* Style for button */
   button.login {
     padding: 10px 20px;
-    background-color: #2b36da;
-    color: white;
-    border: none;
+    background-color: #8ECAE6;
+    color: black;
+    border: 2px solid #333;
     border-radius: 5px;
     cursor: pointer;
+    transition: all 0.20s;
   }
   
   /* Hover effect for button */
   button.login:hover {
-    background-color: #1d2479;
+    color: black;
+    cursor: pointer;
+    transform: scale(1.1);
   }
 
