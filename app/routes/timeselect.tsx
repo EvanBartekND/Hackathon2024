@@ -36,6 +36,9 @@ export default function Index() {
  
   return (
     <div style={{ textAlign: 'center' }}>
+        <Link to='/'>
+          <img src={logo} alt="SideQuestND" style={{ width: '75px', position: 'absolute', top: '15px', left: '15px', zIndex: '2' }} />
+        </Link>
         <h1 style={{ position: 'relative', top: '15px', color: '#000000', fontFamily: 'Space Grotesk, serif'}}>Select Availability:</h1>
         <Container style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
             <div class="row">
